@@ -1,59 +1,149 @@
 @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: normal;
+    src:url('Heebo-VariableFont_wght.ttf') format('truetype');
 }
 
 body{
+    font-family: 'Heebo';
     background-color: rga(255,255,255);
     margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .page-wrapper{
-
+    display: flex;
+    flex-direction: column;
 }
 
-.footer{
+p{
+    font-size: 1.2rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
+h3{
+    font-size: 2rem;
+}
+
+.header, .class, .preamble, .summary, .explanation, .participation, .benefits, .requirements{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    font-size: 10rem;
+}
+
+.header h1, h2{
+   color: white;
+   margin-top: 0;
+   margin-bottom: 0;
 }
 
 .intro{
-    padding: 1rem;
-    margin: 1rem;
-    margin-top: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.summary{
+    height: 30vh;
+    width: 80%;
+    text-align: center;
+    color: white;
+}
+
+.summary .p1{
+    font-size: 1.5rem;
     margin-bottom: 0;
 }
 
-.explanation, .participation, .benefits, .requirements, .footer, .sidebar{
-    padding: 1rem;
-    margin: 1rem;
+.summary .p2{
+    font-size: 1.3rem;
+}
+.preamble{
+    padding-top: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: linear-gradient(#ffffff00,#ffffffb2,#ffffff);
 }
 
-.footer{
-    margin-bottom: 0;
+.preamble h3{
+    margin-top: 2.5rem;
 }
 
-.main{
-    
+.summary, .explanation, .participation, .benefits, .requirements{
+    max-width: 80%;
+    margin: auto;
 }
 
 .sidebar{
     display: flex;
-    margin-bottom: 0;
 }
 
 .wrapper{
     display: flex;
-    width: 100%;
+    max-width: 80%;
+    margin: auto; 
 }
 
 .design-selection, .design-archives, .design-resources{
     display: flex;
-    flex-direction: column;
     flex: 1;
 }
 
-.header{
-    transition: color .5s;
+.sidebar{
+    position: fixed;
+    display: flex;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 12rem;
+    background: linear-gradient(360deg,#ffffff00,#ffffff00,#ffffff,#ffffff,#ffffff,#ffffff);
+    margin-top: -26rem;
+    transition: 0.5s;
 }
 
-.header:hover {
-    color: white;
+.sidebar:hover{
+    margin-top: 0px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 20%;
+    min-width: 12.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 4rem 16rem;
+    background: linear-gradient(#ffffff00,#23a6d5);
 }
